@@ -1,0 +1,41 @@
+-   id: docker-pylint
+    name: docker-pylint
+    description: run pylint in docker container
+    entry: ./exec_in_docker.py pylint
+    language: script
+    files: \.py$
+
+-   id: docker-eslint
+    name: docker-eslint
+    description: run eslint in docker container
+    entry: ./exec_in_docker.py eslint
+    language: script
+    files: \.js$
+
+-   id: docker-es-import-sort
+    name: docker-es-import-sort
+    description: run import-sort in docker container
+    entry: ./exec_in_docker.py import-sort -o
+    language: script
+    files: \.js$
+
+-   id: docker-stylelint
+    name: docker-stylelint
+    description: run stylelint in docker container
+    entry: ./exec_in_docker.py stylelint
+    language: script
+    files: (\.scss|\.css)$
+
+-   id: docker-python-isort
+    name: docker-python-isort
+    description: run isort in docker container
+    entry: ./docker-python-isort.py isort
+    language: script
+    files: \.py$
+
+-   id: python-isort
+    name: run isort
+    description: run isort in your system
+    entry: isort
+    language: system
+    files: \.py$
