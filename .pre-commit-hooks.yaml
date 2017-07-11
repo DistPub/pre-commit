@@ -44,5 +44,5 @@
     name: run pylint
     description: run pylint in your system
     entry: pylint
-    language: script
+    language: system
     files: \.py$
