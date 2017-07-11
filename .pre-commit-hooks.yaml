@@ -39,3 +39,10 @@
     entry: isort
     language: system
     files: \.py$
+
+-   id: python-pylint
+    name: run pylint
+    description: run pylint in your system
+    entry: pylint
+    language: script
+    files: \.py$
