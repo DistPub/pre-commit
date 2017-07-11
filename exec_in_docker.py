@@ -1,3 +1,5 @@
+# !python
+
 import sys
 
 from dockconn import exec_docker, DEFAULT_CONTAINER_NAME
