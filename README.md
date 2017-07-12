@@ -9,5 +9,5 @@
 * python-pylint
 
 # 使用说明
-1. 本地pip install pre-commit安装pre-commit到.git
+1. 本地工作区安装pre-commit到.git
 2. 在working-space-dir即项目根目录添加.pre-commit-config.yaml文件来配置使用的钩子
