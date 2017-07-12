@@ -1,0 +1,5 @@
+-   repo: https://github.com/CubeADGroup/pre-commit.git
+    sha: 3c54113be5d3bac8c15773a684ed85b0f1916b76
+    hooks:
+        - id: python-pylint
+        - id: python-isort
