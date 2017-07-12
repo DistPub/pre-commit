@@ -8,11 +8,6 @@ DEFAULT_WIN7_TLS_HOME = r"{}\\.docker\\machine\\machines\\default\\".format(
 DEFAULT_CONTAINER_NAME = 'web_server_1'
 
 def exec_in_win7_docker(cmd):
-    print  'docker -H {url} --tls --tlscert {tls_home}cert.pem --tlskey {tls_home}key.pem {cmd}'.format(
-        url=DEFAULT_WIN7_BASE_URL,
-        tls_home=DEFAULT_WIN7_TLS_HOME,
-        cmd=cmd,
-        )
     return os.system(
         'docker -H {url} --tls --tlscert {tls_home}cert.pem --tlskey {tls_home}key.pem {cmd}'.format(
         url=DEFAULT_WIN7_BASE_URL,
