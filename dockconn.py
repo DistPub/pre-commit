@@ -3,7 +3,7 @@ import platform
 
 DEFAULT_WIN7_BASE_URL = "tcp://192.168.99.100:2376"
 DEFAULT_WIN7_TLS_HOME = r"{}\\.docker\\machine\\machines\\default\\".format(
-    os.environ.get('USERPROFILE').replace('\\', '\\\\')
+    os.environ.get('USERPROFILE', '').replace('\\', '\\\\')
 )
 DEFAULT_CONTAINER_NAME = 'web_server_1'
 
