@@ -1,4 +1,6 @@
 #!/bin/bash
+DIR=$(dirname $0)
+
 for i in $@ ; do
     skip_file=0
     while read line; do
@@ -10,5 +12,5 @@ for i in $@ ; do
     if [[ $skip_file = 1 ]]; then
         continue
     fi
-    exec_in_docker.py import-sort -o $i
+    $DIR/exec_in_docker.py import-sort -o $i
 done;
