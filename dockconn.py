@@ -7,8 +7,13 @@ DEFAULT_WIN7_TLS_HOME = r"{}\\.docker\\machine\\machines\\default\\".format(
 )
 DEFAULT_CONTAINER_NAME = 'web_server_1'
 
+
+def run_command(cmd):
+    print cmd
+    return os.system(cmd)
+
 def exec_in_win7_docker(cmd):
-    return os.system(
+    return run_command(
         'docker -H {url} --tls --tlscert {tls_home}cert.pem --tlskey {tls_home}key.pem {cmd}'.format(
         url=DEFAULT_WIN7_BASE_URL,
         tls_home=DEFAULT_WIN7_TLS_HOME,
@@ -17,10 +22,10 @@ def exec_in_win7_docker(cmd):
     )
 
 def exec_in_win10_docker(cmd):
-    return os.system('docker {}'.format(cmd))
+    return run_command('docker {}'.format(cmd))
 
 def exec_in_unix_docker(cmd):
-    return os.system('docker {}'.format(cmd))
+    return run_command('docker {}'.format(cmd))
 
 if platform.system() == 'Windows':
     if platform.release() == '10':
