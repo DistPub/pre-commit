@@ -15,7 +15,7 @@
 -   id: docker-es-import-sort
     name: docker-es-import-sort
     description: run import-sort in docker container
-    entry: exec_in_docker.py ./docker-es-import-sort.sh
+    entry: docker-es-import-sort.py
     language: script
     files: (\.js|\.es6)$
 
