@@ -1,3 +1,7 @@
+# require
+* running dockerlize omms env
+* cubeadev
+
 # pre-commit
 本项目是git pre-commit钩子的 repo，有以下几种钩子：
 * docker-pylint
